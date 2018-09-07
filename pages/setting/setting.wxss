@@ -1,0 +1,18 @@
+.weather-setting-cache{
+  display: block;
+  margin: 20rpx;
+  border: 1rpx solid #ccc;
+  color: #000;
+  background-color: #fff;
+}
+
+.weather-setting-cache view{
+  padding: 20rpx;
+}
+
+.weather-setting-cache button{
+  margin: 20rpx 50rpx;
+  color: #fff;
+  font-size: 16pt;
+  background-color: #09bb07;
+}

@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="weather-manage-search regular9">
+    <input placeholder="搜索城市名称" confirm-type="search" focus
+    bindinput="onSearchCity"/>
+  </view>
+  <block wx:if="{{beginSearch}}">
+    <view class="weather-manage-citylist regular11 {{beginSearch ? '' : 'hide'}}">
+      <view class="weather-manage-cityitem"
+      wx:for-items="{{searchcitys}}" wx:for-item="city" wx:key="index"
+      bindtap="addNewcity" data-location="{{city.city}}" hover-class="hover">
+        <text>{{city.city}} - {{city.city_parent}}，{{city.origin}}</text><text></text>
+      </view>
+    </view>
+  </block>
+  <block wx:else="{{beginSearch}}">
+    <view class="weather-manage-hotcity regular11}}">
+      <view>热门城市</view>
+      <view class="weather-manage-hotcity-boxes">
+        <block wx:for="{{hotcitys}}" wx:key="index">
+            <view class="weather-manage-hotcity-box" bindtap="addNewcity" data-location="{{item}}">
+            {{item}}
+            </view>
+        </block>
+      </view>
+    </view>
+  </block>
+</view>

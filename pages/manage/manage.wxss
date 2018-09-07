@@ -1,0 +1,85 @@
+.manage-city-list {
+  margin: 0 20rpx;
+}
+
+.manage-city {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20rpx;
+  padding: 40rpx 20rpx 20rpx 20rpx;
+  border: 1px #ccc solid;
+  background-color: #fff;
+}
+
+.manage-city-desc{
+  display: block;
+  width: 65%;
+  border-right: 1rpx solid #eee;
+}
+
+.manage-city-desc text{
+  display: inline-block;
+  margin: 5rpx 0;
+  padding: 0 10rpx;
+  border-right: 1rpx solid #b2b2b2;
+}
+.manage-city-desc view:first-child{
+  display: block;
+  margin-bottom: 40rpx;
+}
+
+.manage-city-desc view text:last-child{
+  border-right: 0;
+}
+
+.manage-city-temp{
+  width: 35%;
+  height: 100%;
+  line-height: 4em;
+  text-align: center;
+}
+
+.manage-city-weather{
+  width: 64rpx;
+  height: 64rpx;
+}
+
+.manage-tools view{
+  position: fixed;
+  display: block;
+  height: 80rpx;
+  width: 80rpx;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  border-radius: 50%;
+}
+
+.manage-tools-show{
+  bottom: 30rpx;
+  right: 30rpx;
+  background-color: #576b95;
+}
+
+.manage-tools-add{
+  bottom: 30rpx;
+  right: 120rpx;
+  background-color: #09bb07;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.manage-tools-move{
+  bottom: 30rpx;
+  right: 210rpx;
+  background-color: #fb2;
+  opacity: 0;
+  transition: opacity 2s;
+  white-space: nowrap;
+}
+
+.opacity100{
+  opacity: 1;
+}

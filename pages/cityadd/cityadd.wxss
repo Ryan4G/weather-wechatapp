@@ -1,0 +1,49 @@
+.weather-manage-search{
+  display: block;
+  margin: 10rpx 20rpx;
+  padding: 10rpx;
+  border: 1rpx solid #ccc;
+  color: #ccc;
+  background-color: #fff;
+}
+
+.weather-manage-citylist{
+  display: block;  
+  margin: 10rpx 20rpx;
+  
+}
+
+.weather-manage-cityitem{
+  display: block;
+  padding: 30rpx 40rpx;
+  border-bottom: 1rpx solid #f2f2f2;
+  background-color: #fff;
+}
+
+.hover{
+  background-color: #f5f5f5;
+}
+
+.weather-manage-hotcity{
+  display: block;
+  margin: 10rpx 20rpx;
+}
+
+.weather-manage-hotcity-boxes{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap:wrap;
+}
+
+.weather-manage-hotcity-box{
+  margin: 5rpx 10rpx 5rpx 0;
+  padding: 5rpx 15rpx;
+  text-align: center;
+  border: 1rpx solid #f2f2f2;
+  background-color: #fff;
+}
+
+.added{
+  background-color: #ddd;
+}

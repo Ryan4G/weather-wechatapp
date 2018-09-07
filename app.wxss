@@ -1,0 +1,60 @@
+/**app.wxss**/
+page{
+  min-height: 100%;
+  background-color: #eee;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+  box-sizing: border-box;
+}
+
+.light{
+  font-size: 40pt;
+}
+
+.large{
+  font-size: 28pt;
+}
+
+.medium{
+  font-size: 20pt;
+}
+
+.regular{
+  font-size: 18pt;
+}
+
+.regular17{
+  font-size: 17pt;
+}
+
+.regular14{
+  font-size: 14pt;
+}
+
+.regular13{
+  font-size: 13pt;
+}
+
+.regular11{
+  font-size: 11pt;
+}
+
+.regular9{
+  font-size: 9pt;
+}
+
+.sup{
+  vertical-align: text-top;
+}
+
+.hide{
+  visibility: hidden;
+}

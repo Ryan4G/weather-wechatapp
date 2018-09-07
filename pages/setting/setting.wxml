@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="weather-settings">
+    <view class="weather-setting-cache regular13">
+      <view>缓存数据大小：<text> {{cache.size}} kb</text></view>
+      <view>缓存数据容量：<text> {{cache.limit}} Mb</text></view>
+      <button bindtap="clearCache">清空缓存</button>
+    </view>
+  </view>
+</view>

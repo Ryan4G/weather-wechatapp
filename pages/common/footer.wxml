@@ -1,0 +1,19 @@
+<template name="footer">
+  <view class="footer-tabbar regular11">
+    <view class="footer-tabbar-mgr">
+      <navigator class="weather-footer-nav" url="../../pages/manage/manage" hover-class="none">
+        <image src="../../images/menu_1_alpha.png"></image>
+      </navigator>
+    </view>
+    <view class="footer-tabbar-nav">
+      <ul wx:for="{{citys}}" wx:key="index">
+        <li class="{{(index == curr) ? 'selected' : ''}}"></li>
+      </ul>
+    </view>
+    <view class="footer-tabbar-set">
+      <navigator class="weather-footer-nav" url="../../pages/setting/setting" hover-class="none">
+        <image src="../../images/menu_2_alpha.png"></image>
+      </navigator>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="manage-move-list"
+   wx:for-items="{{citys}}" wx:for-item="city" wx:key="index">
+    <view id="move-item-{{index}}" class="manage-move-item {{ ((index == moveBlockSize.currentID) && enableMove) ? 'moved' : ''}}" 
+    bindtouchstart='cityMoveStart' 
+    bindtouchmove='cityMoving'
+    bindtouchend='cityMoveEnd'
+    style="top:{{city.blockY}}rpx;">
+      <view class="manage-city-desc regular11">
+        <view>
+          <text class="regular13">{{city.location}}</text>
+          <text>{{city.origin}}</text>
+        </view>
+      </view>
+      <view class="manage-city-operate regular11">
+        <view bindlongpress='cityLongpress' data-id="{{index}}">
+          移动
+        </view>
+        <view bindtap='cityDelete' data-id="{{index}}">
+          删除
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <view class="manage-tools">
+    <view class="manage-tools-save" bindtap="saveOrder">S</view>
+  </view>
+</view>

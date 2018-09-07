@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="manage-city-list"
+   wx:for-items="{{citys}}" wx:for-item="city" wx:key="index">
+    <view class="manage-city">
+      <view class="manage-city-desc regular11">
+        <view>
+          <text class="regular13">{{city.location}}</text>
+          <text>{{city.origin}}</text>
+        </view>
+        <view>
+          <text>{{city.wind_dir}}{{city.wind_sc}}</text>
+          <text>湿度{{city.humidity}}%</text>
+          <text>{{city.weather}}</text>
+        </view>
+      </view>
+      <view class="manage-city-temp">
+        <image class="manage-city-weather" src="../../images/weather/{{city.code}}.png"></image>
+        <text class="large">{{city.tempC}}<text class="regular">℃</text></text>
+      </view>
+    </view>
+  </view>
+  <view class="manage-tools">
+    <view class="manage-tools-show" animation="{{animation}}" bindtap="rotate">+</view>
+    <view class="manage-tools-add {{showAdd ? 'opacity100' : 'hide'}}">
+      <navigator url="../../pages/cityadd/cityadd">A</navigator>
+    </view>
+    <view class="manage-tools-move {{showMove ? 'opacity100' : 'hide'}}">
+      <navigator url="../../pages/citymove/citymove">M</navigator>
+    </view>
+  </view>
+</view>

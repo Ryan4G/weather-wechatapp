@@ -1,0 +1,72 @@
+.manage-move-list {
+  margin: 0 20rpx;
+}
+
+.manage-move-item {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 670rpx;
+  padding: 40rpx 20rpx;
+  border: 1rpx #ccc solid;
+  background-color: #fff;
+}
+
+.manage-city-desc{
+  display: block;
+  width: 65%;
+  border-right: 1rpx solid #eee;
+}
+
+.manage-city-desc text{
+  display: inline-block;
+  margin: 5rpx 0;
+  padding: 0 10rpx;
+  border-right: 1rpx solid #b2b2b2;
+}
+
+.manage-city-desc view text:last-child{
+  border-right: 0;
+}
+
+.manage-city-operate{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 35%;
+  height: 100%;
+  text-align: center;
+}
+
+.manage-city-operate view{
+  display: inline-block;
+  height: 100%;
+  padding-top: 5rpx;
+  margin: 0 10rpx;
+}
+
+.manage-tools view{
+  position: fixed;
+  display: block;
+  height: 80rpx;
+  width: 80rpx;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  border-radius: 50%;
+  white-space: nowrap;
+}
+
+.manage-tools-save{
+  bottom: 30rpx;
+  right: 30rpx;
+  background-color: #576b95;
+}
+
+.moved{
+  background-color: #f2f2f2;
+  opacity: .8;
+  z-index: 1;
+}

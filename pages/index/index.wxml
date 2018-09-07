@@ -1,0 +1,56 @@
+<!--index.wxml-->
+<import src="../common/footer.wxml" />
+
+<view class="container">
+  <swiper class="weather-pages" style='height:{{pageHeight}}rpx;'
+    current="{{currentCity}}"
+    bindchange="nextView"> 
+    <block wx:for-items="{{weatherInfos}}" wx:for-item="weatherInfo" wx:key="index">
+      <swiper-item id="weather-page-{{index}}">
+        <scroll-view scroll-y="true" scroll-x="false" class="weather-page">
+          <view class="weather-bg">
+            <image src="../../images/{{bgURI}}.jpg"></image>
+            <view class="weather-bg-tempInfo">
+              <view class="light">
+                {{weatherInfo.tempC}}<text class="medium">℃</text>
+              </view>
+              <view class="regular13">{{weatherInfo.city}}</view>
+              <view class="regular11">{{weatherInfo.weather}}</view>
+            </view>
+            <view class="weather-bg-wetInfo regular14">
+              <view class="weather-bg-wetInfo-item">
+                <view>{{weatherInfo.wind_sc}}</view>
+                <text class="regular11">{{weatherInfo.wind_dir}}</text>
+              </view>
+              <view class="weather-bg-wetInfo-item">
+                <view>{{weatherInfo.humidity}} %</view>
+                <text class="regular11">相对湿度</text>
+              </view>
+              <view class="weather-bg-wetInfo-item">
+                <view>{{weatherInfo.tempFit}} ℃</view>
+                <text class="regular11">体感温度</text>
+              </view>
+            </view>
+          </view>
+          <view class="weather-forecast regular11">
+            <block wx:for-items="{{weatherInfo.futureInfo}}" wx:for-item="weather" wx:key="index">
+              <view class="weather-forecast-item">
+                <view>{{weather.date}}</view>
+                <view>
+                  <image src="../../images/weather/{{weather.code}}.png"></image>
+                  {{weather.weather}}
+                </view>
+                <view>{{weather.tempCUpper}} / {{weather.tempCLower}} ℃</view>
+              </view>
+            </block>
+          </view>
+        </scroll-view>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="weather-footer regular9">
+    <text>{{footerNote}}</text>
+  </view>
+  <template is="footer" data="{{citys: totalCitys, curr: currentCity}}"></template>
+</view>

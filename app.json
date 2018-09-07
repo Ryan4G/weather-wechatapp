@@ -1,0 +1,15 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/manage/manage",
+    "pages/setting/setting",
+    "pages/citymove/citymove",
+    "pages/cityadd/cityadd"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#eee",
+    "navigationBarTitleText": "天气预报",
+    "navigationBarTextStyle":"black"
+  }
+}
